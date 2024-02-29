@@ -1,6 +1,7 @@
 package com.self.JdbcTemplateDemo.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
+@Builder
 public class Employee {
 
     private int id;

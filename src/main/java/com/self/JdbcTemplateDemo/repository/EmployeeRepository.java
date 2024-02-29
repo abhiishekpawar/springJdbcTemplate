@@ -22,11 +22,13 @@ public class EmployeeRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public void save(Employee employee) {
+    public int save(Employee employee) {
         String sql = "insert into employee (id,name,role) values (?,?,?)";
 
         int rows = jdbcTemplate.update(sql, employee.getId(), employee.getName(), employee.getRole());
         System.out.println("Total rows added are " + rows);
+
+        return rows;
     }
 
     public List<Employee> getAll() {
